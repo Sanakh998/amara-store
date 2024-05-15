@@ -1,0 +1,71 @@
+a{
+  text-decoration: none;
+}
+input:focus{
+  box-shadow: none !important;
+}
+
+.text-honeydew{
+  color: #F1FAEE;
+}
+.bg-honeydew{
+  background-color: #F1FAEE;
+}
+
+.text-pantone{
+  color: #E63946;
+}
+.bg-pantone{
+  background-color: #E63946;
+}
+
+.text-cerulean{
+  color: #457B9D;
+}
+.bg-cerulean{
+  background-color: #457B9D;
+}
+
+.text-berkeley{
+  color: #1D3557;
+}
+
+.bg-berkeley{
+  background-color: #1D3557;
+}
+
+.text-photoblue{
+  color: #A8DADC;
+}
+
+.bg-photoblue{
+  background-color: #A8DADC;
+}
+
+.btn-danger{
+  background-color: #E63946;
+  color: #F1FAEE;
+}
+/* 
+#E63946 red  ~ Red (Pantone)
+#F1FAEE creamy white ~ Honeydew
+#A8DADC sky blue ~ Non Photo blue
+#457B9D light blue ~ Cerulean
+#1D3557 dark blue ~ Berkeley Blue
+*/
+
+
+.card-image{
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+}
+.product-card{
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+}
+
+@media screen (min-width=568) {
+  
+}
