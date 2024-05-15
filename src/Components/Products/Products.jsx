@@ -1,5 +1,4 @@
 import React from "react";
-import { cardStyle } from "../Styles/cardSize";
 import { Link } from "react-router-dom";
 
 const Products = ({products, category}) => {
@@ -8,10 +7,10 @@ const Products = ({products, category}) => {
       <h2 className="bg-berkeley text-honeydew py-2 mt-2 rounded ps-3">
         {category}
       </h2>
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-">
+      <div className="row  row-cols-1 row-cols-md-2 row-cols-lg-4 g-">
         {products &&
           products.map((product) => (
-            <div key={product.id} className="col">
+            <div key={product.id} className="col d-flex justify-content-center">
               <Link to={'/products/' + product.id}>
               <div className="card product-card">
                 <div className="card-image" >
