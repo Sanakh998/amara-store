@@ -8,7 +8,7 @@ const Hero = () => {
 
   useEffect (()=>{
     const handleResize = () => {
-      setScreenSize(windo.innerWidth)
+      setScreenSize(window.innerWidth)
     };
     window.addEventListener('resize', handleResize);
     return () => {
@@ -18,7 +18,7 @@ const Hero = () => {
   let backgroundImage;
   if (screenSize<450){
     backgroundImage = heroSmImage;
-  } esle if (screenSize < 768){
+  } else if (screenSize < 768){
     backgroundImage = heroMdImage;
   } else {
     backgroundImage = heroImage;
