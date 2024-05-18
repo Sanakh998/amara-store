@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Products from "../Products/Products";
+import Loading from "../Loading/Loading";
 const Electronics = () => {
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -15,9 +16,11 @@ const Electronics = () => {
         let products = await res.json();
         setProducts(products);
         console.log(products);
+      }else{
+        throw new Error("Something went Wrong Please Try Again")
       }
     } catch (error) {
-      setError(error.message);
+      setError("Please Check Your Internet Connection and Try Again");
       console.log(error);
     } finally {
       setLoading(false);
@@ -27,7 +30,11 @@ const Electronics = () => {
   useEffect(() => {
     fetchData();
   }, []);
-
+  if(loading){
+    return <Loading/>
+  }else if (error){
+    return <div>{error}</div>
+  }
   return <Products products={products} category={"Electronics"} />;
 };
 

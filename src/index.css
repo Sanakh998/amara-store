@@ -46,6 +46,21 @@ input:focus{
   background-color: #E63946;
   color: #F1FAEE;
 }
+.btn-primary{
+  background-color: #F1FAEE;
+  
+  color: #1D3557;
+}
+.active{
+  color: #E63946 !important;
+}
+
+.hero{
+  height: 100vh;
+  background: url('hero-image.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /* 
 #E63946 red  ~ Red (Pantone)
 #F1FAEE creamy white ~ Honeydew
@@ -59,11 +74,17 @@ input:focus{
   height: 300px;
   width: 300px;
   overflow: hidden;
+  text-align: center;
 }
 .product-card{
   height: 300px;
   width: 300px;
   overflow: hidden;
+  text-align: center;
+}
+
+.heading, .heading-text{
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -72,6 +93,22 @@ input:focus{
     width: 400px;
     overflow: hidden;
   }
+  .hero{
+    background-size: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading{
+    display: block;
+    font-size: 70px;
+  }
+  .heading-text{
+    display: block;
+    font-size: 20px;
+  }
+  
 }
 
 @media screen and (max-width: 450px) {

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import ProductDetails from "../Components/Products/ProductDetails";
+import Loading from '../Components/Loading/Loading'
 
-const ProductDetails = () => {
+const ProductPage = () => {
   let { id } = useParams();
 
   const [product, setProduct] = useState(null);
@@ -29,15 +31,19 @@ const ProductDetails = () => {
     fetchData();
   }, []);
 
-  if(product){
+  if (error) {
 
+  } else {
     return (
-      <div>
-      <h1>ProductDetails{id}</h1>
-      <p>{product.price}</p>
-    </div>
-  );
+      <div className="container-fluid">
+        <Link to={"/"} className="btn btn-danger my-3 ms-2 px-3">
+          Back
+        </Link>
+        {loading && <Loading/>}
+        {product && <ProductDetails product={product} />}
+      </div>
+    );
+  }
 };
-}
 
-export default ProductDetails;
+export default ProductPage;
