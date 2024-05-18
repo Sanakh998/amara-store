@@ -68,7 +68,9 @@ input:focus{
 #457B9D light blue ~ Cerulean
 #1D3557 dark blue ~ Berkeley Blue
 */
-
+.logo{
+  width: 200px;
+}
 
 .card-image{
   height: 300px;
@@ -83,9 +85,6 @@ input:focus{
   text-align: center;
 }
 
-.heading, .heading-text{
-  display: none;
-}
 
 @media screen and (max-width: 768px) {
   .product-card, .card-image{
@@ -94,19 +93,10 @@ input:focus{
     overflow: hidden;
   }
   .hero{
-    background-size: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .heading{
-    display: block;
-    font-size: 70px;
-  }
-  .heading-text{
-    display: block;
-    font-size: 20px;
+  height: 100vh;
+    background: url('hero-md.svg');
+    background-size: cover;
+  background-repeat: no-repeat;
   }
   
 }
@@ -116,5 +106,11 @@ input:focus{
     height: 300px;
     width: 300px;
     overflow: hidden;
+  }
+  .hero{
+  height: 100vh;
+    background: url('hero-sm.svg');
+    background-size: cover;
+  background-repeat: no-repeat;
   }
 }

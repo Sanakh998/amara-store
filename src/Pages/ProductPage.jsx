@@ -36,7 +36,7 @@ const ProductPage = () => {
   } else {
     return (
       <div className="container-fluid">
-        <Link to={"/"} className="btn btn-danger my-3 ms-2 px-3">
+        <Link to={-1} className="btn btn-danger my-3 ms-2 px-3">
           Back
         </Link>
         {loading && <Loading/>}

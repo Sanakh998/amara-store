@@ -1,15 +1,18 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
+import logo from '../../assets/store-logo.svg'
+
 const NavBar = () => {
   return (
     <nav
-      className="navbar navbar-expand-md sticky-top bg-berkeley py-sm-3"
+      className="navbar navbar-expand-lg sticky-top bg-berkeley py-sm-3"
       data-bs-theme="dark"
     >
       <div className="container-fluid">
         <Link to={"/"}>
-          <h5 className="m-0 mx-2 text-honeydew">Amara Store</h5>
+          {/* <h5 className="m-0 mx-2 text-honeydew">Amara Store</h5> */}
+          <img className="logo" src={logo} alt="Logo" />
         </Link>
         <button
           className="navbar-toggler"
