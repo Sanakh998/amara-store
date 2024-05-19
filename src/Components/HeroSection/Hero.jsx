@@ -12,7 +12,8 @@ const Hero = () => {
     };
     window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListner('resize', handleResize);
+      window.removeEventListener('resize', handleResize);
+    }
   },[]);
 
   let backgroundImage;
