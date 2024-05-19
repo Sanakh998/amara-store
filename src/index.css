@@ -55,12 +55,12 @@ input:focus{
   color: #E63946 !important;
 }
 
-.hero{
+/* .hero{
   height: 100vh;
   background: url('hero-image.svg');
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 /* 
 #E63946 red  ~ Red (Pantone)
 #F1FAEE creamy white ~ Honeydew
@@ -92,12 +92,12 @@ input:focus{
     width: 400px;
     overflow: hidden;
   }
-  .hero{
+  /* .hero{
   height: 100vh;
     background: url('hero-md.svg');
     background-size: cover;
   background-repeat: no-repeat;
-  }
+  } */
   
 }
 
@@ -107,10 +107,10 @@ input:focus{
     width: 300px;
     overflow: hidden;
   }
-  .hero{
+  /* .hero{
   height: 100vh;
     background: url('hero-sm.svg');
     background-size: cover;
   background-repeat: no-repeat;
-  }
+  } */
 }
