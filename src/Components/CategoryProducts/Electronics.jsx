@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Products from "../Products/Products";
 import Loading from "../Loading/Loading";
 const Electronics = () => {
@@ -15,13 +15,11 @@ const Electronics = () => {
       if (res.ok) {
         let products = await res.json();
         setProducts(products);
-        console.log(products);
-      }else{
-        throw new Error("Something went Wrong Please Try Again")
+      } else {
+        throw new Error("Something went Wrong Please Try Again");
       }
     } catch (error) {
       setError("Please Check Your Internet Connection and Try Again");
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -30,12 +28,16 @@ const Electronics = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  if(loading){
-    return <Loading/>
-  }else if (error){
-    return <div>{error}</div>
+  if (loading) {
+    return <Loading />;
+  } else if (error) {
+    return <div>{error}</div>;
   }
-  return <Products products={products} category={"Electronics"} />;
+  return (
+    <div>
+      <Products products={products} category={"Electronics"} />;
+    </div>
+  );
 };
 
 export default Electronics;

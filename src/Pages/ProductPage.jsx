@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ProductDetails from "../Components/Products/ProductDetails";
 import Loading from '../Components/Loading/Loading'
+import BackButton from "../Components/Buttons/BackButton";
 
 const ProductPage = () => {
   let { id } = useParams();
@@ -17,11 +18,9 @@ const ProductPage = () => {
       if (res.ok) {
         let product = await res.json();
         setProduct(product);
-        console.log(product);
       }
     } catch (error) {
       setError(error.message);
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -36,9 +35,7 @@ const ProductPage = () => {
   } else {
     return (
       <div className="container-fluid">
-        <Link to={-1} className="btn btn-danger my-3 ms-2 px-3">
-          Back
-        </Link>
+        <BackButton/>
         {loading && <Loading/>}
         {product && <ProductDetails product={product} />}
       </div>

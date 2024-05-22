@@ -33,7 +33,7 @@ const Hero = () => {
   },[screenSize])
 
   let backgroundStyle = {
-    height: "100vh",
+    height: "85vh",
     backgroundImage: `url('${coverImage}')`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",

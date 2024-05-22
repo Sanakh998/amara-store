@@ -17,13 +17,11 @@ const Jewelry = () => {
       if (res.ok) {
         let products = await res.json();
         setProducts(products);
-        console.log(products);
       }else{
         throw new Error("Something went Wrong Please Try Again")
       }
     } catch (error) {
       setError("Please Check Your Internet Connection and Try Again");
-      console.log(error);
     } finally {
       setLoading(false);
     }

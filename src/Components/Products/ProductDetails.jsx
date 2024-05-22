@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { CartContext } from "../Contexts/CartContext";
+import RemoveFromCart from "../Buttons/RemoveFromCart";
+import AddToCart from "../Buttons/AddToCart";
 
 const ProductDetails = ({ product }) => {
+  const [cartItem, setCartItem] = useState(false);
+  const { addToCart, isCarted, cart } = useContext(CartContext);
+
+  const checkCart = () => {
+    setCartItem(
+      (cartItem) => (cartItem = cart.find((item) => item.id === product.id))
+    );
+  };
+  useEffect(() => {
+    checkCart();
+  }, [cart]);
   return (
     <div className="container bg-honeydew rounded border p-3 mb-3">
       <div className="row">
@@ -15,10 +29,13 @@ const ProductDetails = ({ product }) => {
             <h5>Rating: {product.rating.rate} </h5>
           </div>
           <div className="my-2 col-8 col-md-5 mt-md-auto mb-md-4 d-grid mx-auto">
-            <button className="btn btn-primary ">Add to cart</button>
+            {cartItem ? (
+              <RemoveFromCart id={product.id} />
+            ) : (
+              <AddToCart id={product.id} />
+            )}
           </div>
         </div>
-        
       </div>
     </div>
   );

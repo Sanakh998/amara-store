@@ -38,6 +38,10 @@ const NavBar = () => {
               title={"Women's Clothing"}
               path={"/products/women-clothing"}
             />
+            <NavLinks
+              title={"My Cart"}
+              path={"/cart"}
+            />
           </ul>
         </div>
       </div>
